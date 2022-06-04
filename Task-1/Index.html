@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weight Converter</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Custom JS -->
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- Header code-->
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <h1 class="headline">Weight Converter</h1>
+        <!-- Users input -->
+        <form>
+          <input type="text" id="search" placeholder="Enter kilograms..." />
+          <input type="submit" id="submit-btn" value="Calculate" />
+        </form>
+        <!-- Place for output after form submission -->
+        <div id="output">
+       
+        <script>
+          document.getElementById('submit-btn').addEventListener('click',weightConverter);
+
+          function weightConverter (e){
+          e.preventDefault();
+
+          const KILO=document.getElementById('search').value
+          const output=document.getElementById('output');
+          
+          const outputPounds=document.createElement('p');
+          outputPounds.innerText='Pounds:' + ((KILO*2.2046).toFixed(2));
+       
+          const outputGrams=document.createElement('p');
+          outputGrams.innerText='Grams:' + ((KILO/ 0.0010000).toFixed(2));
+
+          const outputOunces=document.createElement('p');
+          outputOunces.innerText='Ounces:' + ((KILO* 35.274).toFixed(2));
+       
+         output.append(outputPounds, outputGrams, outputOunces);
+          };
+        </script>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer code -->
+    </footer>
+  </body>
+</html>
