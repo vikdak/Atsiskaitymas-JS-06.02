@@ -40,6 +40,9 @@ body {
 #output h1 {
   font-size: 1.5rem;
 }
+#output li {
+  font-size: 0.8rem;
+}
 
 .car-card {
   flex-wrap: wrap;
